@@ -1,5 +1,7 @@
 
 import { useState,useRef } from "react";
+import Button from "./Button";
+import { TiLocationArrow } from "react-icons/ti";
 
 const Hero = () => {
     const [currentIndex,setCurrentIndex] = useState(1);
@@ -54,7 +56,7 @@ const Hero = () => {
                     />
                     <video
                         src={getVideoSrc(currentIndex )}
-                        autoPlay
+                        // autoPlay
                         loop
                         muted
                         className="absolute left-0 top-0 size-full object-cover object-center"
@@ -70,12 +72,19 @@ const Hero = () => {
                         <h1 className="hero-heading text-blue-100 drop-shadow-2xl tracking-wide">
                             VALORA<b>N</b>T
                         </h1>
-                        <p className="mb-5 max-w-64 font-robert-regular text-blue-100 text-sm lg:text-base md:ml-3">
-                            The ultimate gaming experience <br /> for you and your friends
-                        </p>
+                        <div className="md:ml-3">
+                            <p className="max-w-68 font-robert-regular text-blue-100 text-sm lg:text-base mb-2">
+                                A 5v5 character-based tactical shooter <br /> with ultimate gaming experience
+                            </p>
+                            <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="bg-button-150 flex-center gap-1 text-blue-100"  />
+                        </div>
+                        
                     </div>
                 </div>
             </div>
+            <h1 className=" hero-heading absolute bottom-5 right-5 text-black tracking-wide">
+                GAMING
+            </h1>
         </div>
     );
 };

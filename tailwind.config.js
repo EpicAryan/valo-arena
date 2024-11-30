@@ -31,6 +31,12 @@ export default {
           primary: "#8e983f",
           secondary: "#edff66",
         },
+        button: {
+          50: '#EE7F6D',
+          100: '#EB635E',
+          150: "#e9464e",
+
+        }
       }
     },
   },
