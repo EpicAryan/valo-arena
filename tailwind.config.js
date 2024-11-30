@@ -12,6 +12,7 @@ export default {
         'cicular-web': ['cicular-web'],
         'robert-medium': ['robert-medium'],
         'robert-regular': ['robert-regular'],
+        'valorant': ['valorant'],
       },
       colors: {
         blue: {

@@ -1,9 +1,9 @@
+import Hero from "./components/Hero";
+
 const App = () => {
     return (
-        <main>
-            <div className="text-5xl text-red-primary font-bold"> WELCOME</div>
-        <div className="text-5xl text-yellow-primary font-bold"> WELCOME</div>
-<div className="text-5xl text-yellow-secondary font-bold"> WELCOME</div>
+        <main className="relative min-h-screen w-screen overflow-x-hidden">
+            <Hero />
         </main>
     );
 };
