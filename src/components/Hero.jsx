@@ -100,6 +100,7 @@ const Hero = () => {
                             <video
                                 ref={nextVideoRef}
                                 src={getVideoSrc(upcomingVideoIndex)}
+                                autoPlay
                                 loop
                                 muted
                                 id="current-video"
@@ -118,7 +119,7 @@ const Hero = () => {
                         onLoadedData = {handleVideoLoad}
                     />
                     <video
-                        src={getVideoSrc( currentIndex === totalVideos - 1 ? 1 : currentIndex )}
+                        src={getVideoSrc( currentIndex === totalVideos -1? 1 : currentIndex )}
                         autoPlay
                         loop
                         muted
@@ -139,7 +140,7 @@ const Hero = () => {
                             <p className="max-w-68 font-robert-regular text-blue-100 text-sm lg:text-base mb-2">
                                 A 5v5 character-based tactical shooter <br /> with ultimate gaming experience
                             </p>
-                            <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="!bg-red-secondary flex-center gap-1"  />
+                            <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="!bg-red-secondary flex-center gap-1 border border-black"  />
                         </div>
                         
                     </div>
