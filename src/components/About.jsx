@@ -30,8 +30,7 @@ const About = () => {
           <h2 className="font-general text-sm uppercase md:text-sm">
             Welcome To The Valorant World
           </h2>
-          <AnimatedTitle />
-          
+          <AnimatedTitle title="Explore thrilling battles and <br/> unleash your ultimate potential" containerClass="mt-5 !text-black text-center "/>
           <div className="about-subtext">
             <p>
               Valorant begins—your tactics, your triumphs, your legend
@@ -42,7 +41,7 @@ const About = () => {
           </div>
       </div>
       <div className="h-dvh w-screen" id="clip">
-        <div className="mask-clip-path about-image border border-black">
+        <div className="mask-clip-path about-image border-2 border-gray-500">
           <img src="img/about.jpeg" alt="background" className="absolute left-0 top-0 size-full object-cover"/>
         </div>
       </div>
