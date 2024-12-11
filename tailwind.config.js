@@ -28,8 +28,10 @@ export default {
           tertiary: '#ff1023',
         },
         yellow: {
-          primary: "#8e983f",
-          secondary: "#edff66",
+          primary: "#facc15",
+          secondary: "#f4c715",
+          tertiary: "#fef08a",
+          title: "#fef9c3",
         },
         button: {
           50: '#EE7F6D',

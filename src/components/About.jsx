@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-          <h2 className="font-general text-sm uppercase md:text-sm">
+          <h2 className="font-general text-sm uppercase md:text-sm text-red-secondary font-medium">
             Welcome To The Valorant World
           </h2>
           <AnimatedTitle title="Explore thrilling battles and <br/> unleash your ultimate potential" containerClass="mt-5 !text-black text-center "/>
@@ -41,7 +41,7 @@ const About = () => {
           </div>
       </div>
       <div className="h-dvh w-screen" id="clip">
-        <div className="mask-clip-path about-image border-2 border-gray-500">
+        <div className="mask-clip-path about-image border-2 border-gray-500 ">
           <img src="img/about.jpeg" alt="background" className="absolute left-0 top-0 size-full object-cover"/>
         </div>
       </div>

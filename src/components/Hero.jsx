@@ -134,10 +134,10 @@ const Hero = () => {
                 <div className="absolute left-0 top-0 z-40 size-full">
                     <div className="mt-24 px-5 sm:px-10">
                         <h1 className="hero-heading text-blue-100 drop-shadow-2xl tracking-wide">
-                            VALORA<b>N</b>T
+                            VALORA<b className="">N</b>T
                         </h1>
                         <div className="md:ml-3">
-                            <p className="max-w-68 font-robert-regular text-blue-100 text-sm lg:text-base mb-2">
+                            <p className="max-w-68 font-robert-regular text-blue-100 font-medium text-sm lg:text-base mb-2">
                                 A 5v5 character-based tactical shooter <br /> with ultimate gaming experience
                             </p>
                             <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="!bg-red-secondary flex-center gap-1 border border-black"  />
