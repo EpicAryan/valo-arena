@@ -29,8 +29,8 @@ const Story = () => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = ((y - centerY) / centerY) * -10;
-        const rotateY = ((x - centerX) / centerX) * 10;
+        const rotateX = ((y - centerY) / centerY) * -3;
+        const rotateY = ((x - centerX) / centerX) * 3;
 
         gsap.to(element, {
             duration: 0.3,
@@ -43,7 +43,7 @@ const Story = () => {
   return (
     <section id="story" className="min-h-dvh w-screen bg-black text-blue-50">
         <div className="flex flex-col size-full items-center py-10 pb-24">
-            <p className="font-general text-sm uppercase md:text-[10px]">
+            <p className="font-general text-sm uppercase font-medium">
                 Way to Valorant Arena
             </p>
             <div className="relative size-full">
@@ -55,7 +55,7 @@ const Story = () => {
 
                 <div className="story-img-container">
                     <div className="story-img-mask">
-                        <div className="md:story-img-content">
+                        <div className="story-img-content">
                             <img 
                                 ref = {frameRef}
                                 onMouseLeave={handleMouseLeave}
@@ -71,13 +71,13 @@ const Story = () => {
                     <RoundedCorners />
                 </div>
             </div>
-            <div className = '-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end'>
+            <div className = '-mt-80 flex w-full justify-center md:-mt-64 md:me-96 md:justify-end'>
                 <div className="flex h-full w-fit flex-col items-center md:items-start">
-                    <p className="mt-3 max-w-sm text-center font-circular-web text-blue-75 md:text-start">
+                    <p className="mt-3 max-w-sm text-center font-circular-web text-blue-75 md:text-start text-lg ">
                         Join over 10 million players worldwide, challenge your friends, and face off in the most challenging battles in Valorant.
                     </p>
                     <Button
-                        id="realm-button" title="discover prologue" className='mt-5'
+                        id="realm-button" title="discover prologue" containerClass='mt-5' titleClass='text-sm font-medium'
                     />
                 </div>
             </div>
