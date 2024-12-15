@@ -32,14 +32,31 @@ const BentoTilt = ({ children, className = ''}) => {
     )
 }
 
-const BentoCard = ({src, title, description,containerClass}) => {
+const BentoCard = ({src, title, description,containerClass, hoverPlay = false, autoPlay = false}) => {
+
+    const videoRef = useRef(null);
+
+    const handleMouseEnter = () => {
+        if (hoverPlay && videoRef.current) {
+            videoRef.current.play();
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (hoverPlay && videoRef.current) {
+            videoRef.current.pause();
+        }
+    };
+
   return (
-    <div className={clsx("relative size-full",containerClass)}>
+    <div className={clsx("relative size-full",containerClass)}  onMouseEnter={hoverPlay ? handleMouseEnter : undefined}
+    onMouseLeave={hoverPlay ? handleMouseLeave : undefined}>
         <video 
+            ref={videoRef}
             src={src}
             loop
             muted
-            autoPlay
+            autoPlay={autoPlay}
             className="absolute left-0 top-0 size-full object-cover object-center rounded-xl"
         />
         <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">

@@ -18,6 +18,7 @@ const Features = () => {
             src="videos/feature-1.mp4"
             title = {<>radiant</>}
             description = "Face off in the most challenging battles in Valorant. See how radiant players defeat their enemies and gain the ultimate reward"
+            hoverPlay={true}
           />
         </BentoTilt>
         <div className="grid h-[140vh] grid-cols-2 grid-rows-3 gap-10">
@@ -26,6 +27,7 @@ const Features = () => {
               src="videos/feature-2.mp4"
               title = {<>challenges</>}
               description = "Join over 10 million players worldwide, challenge your friends, and face off in the most challenging battles in Valorant."
+              autoPlay={true}
             />
           </BentoTilt>
 
@@ -34,6 +36,7 @@ const Features = () => {
               src="videos/feature-3.mp4"
               title = {<>community</>}
               description = "Connect with fellow Valorant players, share your experiences, and learn from each other. Join the Valorant community today!"
+              autoPlay={true}
             />
           </BentoTilt>
 
@@ -42,6 +45,7 @@ const Features = () => {
               src="videos/feature-4.mp4"
               title = {<>Axule</>}
               description = "Connect with fellow Valorant players, share your experiences, and learn from each other. Join the Valorant community today!"
+              autoPlay={true}
             />
           </BentoTilt>
           <BentoTilt className="bento-tilt_2">

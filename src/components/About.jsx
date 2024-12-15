@@ -20,12 +20,13 @@ const About = () => {
     clipAnimation.to('.mask-clip-path', {
       width: '100vw',
       height: '100vh',
-      borderRadius: 0
+      borderRadius: 0,
+      border: 0,
     })
   });
 
   return (
-    <div id="about" className="min-h-screen w-screen">
+    <div id="about" className="min-h-screen w-screen overflow-x-hidden">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
           <h2 className="font-general text-sm uppercase md:text-sm text-red-secondary font-medium">
             Welcome To The Valorant World
