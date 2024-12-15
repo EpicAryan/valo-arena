@@ -33,6 +33,11 @@ body {
         font-family: 'valorant';
         src: url('/fonts/Valorant.ttf') format('ttf');
     }
+
+    @font-face {
+      font-family: 'chicle';
+      src: url('/fonts/CaveatBrush-Regular.ttf') format('ttf');
+  }
 }
 
 @layer utilities {
@@ -78,11 +83,11 @@ body {
   }
 
   .animated-title {
-    @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
+    @apply flex flex-col gap-1 text-6xl uppercase leading-[.8] text-white sm:px-32 md:text-[5rem];
   }
 
   .animated-word {
-    @apply special-font font-zentry font-black opacity-0;
+    @apply special-font font-valorant tracking-tighter font-black opacity-0;
     transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
     transform-origin: 50% 50% -150px !important;
     will-change: opacity, transform;
@@ -124,7 +129,7 @@ body {
   }
 
   .contact-clip-path-2 {
-    clip-path: polygon(29% 15%, 85% 30%, 50% 100%, 10% 64%);
+    clip-path: polygon(32% 1%, 84% 14%, 83% 100%, 10% 100%);
   }
 }
 .indicator-line {
