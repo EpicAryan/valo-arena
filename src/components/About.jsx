@@ -31,7 +31,7 @@ const About = () => {
           <h2 className="font-general text-sm uppercase md:text-sm text-red-secondary font-medium">
             Welcome To The Valorant World
           </h2>
-          <AnimatedTitle title="Explore thrilling battles and <br/> unleash your ultimate potential" containerClass="mt-5 !text-black text-center "/>
+          <AnimatedTitle title="Explore thrilling battles and <br/> unleash your ultimate potential" containerClass="mt-5 !text-black text-center !text-3xl md:!text-[5rem] "/>
           <div className="about-subtext">
             <p>
               Valorant begins—your tactics, your triumphs, your legend
