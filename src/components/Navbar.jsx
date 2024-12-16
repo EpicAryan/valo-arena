@@ -4,7 +4,7 @@ import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
 import gsap from "gsap";
 
-const navItems = ['About','Agents', 'Weapons', 'Contact'];
+const navItems = ['About','Arena', 'Maps', 'Contact'];
 
 const Navbar = () => {
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -22,6 +22,7 @@ const Navbar = () => {
 
         setIsIndicatorActive((prev) => !prev);
     };
+
 
     useEffect(() => {
         if(currentScrollY === 0) {

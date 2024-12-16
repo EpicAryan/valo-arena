@@ -41,7 +41,7 @@ const Story = () => {
     };
 
   return (
-    <section id="story" className="min-h-dvh w-screen bg-black text-blue-50">
+    <section id="maps" className="min-h-dvh w-screen bg-black text-blue-50">
         <div className="flex flex-col size-full items-center py-10 pb-24">
             <p className="font-general text-sm md:text-base uppercase font-semibold">
                 Way to Valorant Arena
