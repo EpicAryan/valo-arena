@@ -25,8 +25,8 @@ const Features = () => {
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 ">
             <BentoCard 
               src="videos/feature-2.mp4"
-              title = {<>challenges</>}
-              description = "Join over 10 million players worldwide, challenge your friends, and face off in the most challenging battles in Valorant."
+              title = {<>Agents</>}
+              description = "Unleash the power of unique Valorant agents, each armed with game-changing abilities and personalities that redefine every battle!"
               autoPlay={true}
             />
           </BentoTilt>
@@ -43,14 +43,14 @@ const Features = () => {
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 me-24 md:me-0">
             <BentoCard
               src="videos/feature-4.mp4"
-              title = {<>Axule</>}
-              description = "Connect with fellow Valorant players, share your experiences, and learn from each other. Join the Valorant community today!"
+              title = {<>Arsenal</>}
+              description = "Master Valorant’s lethal weapons and game-changing ultimates to dominate every battle!"
               autoPlay={true}
             />
           </BentoTilt>
           <BentoTilt className="bento-tilt_2">
             <div className="flex size-full flex-col justify-between bg-red-secondary p-5">
-              <h1 className="bento-title max-w-64 text-black">Additional sections launching soon</h1>
+              <h1 className="bento-title md:!text-7xl !text-4xl max-w-64 text-black">Additional sections launching soon</h1>
               <TiLocationArrow className="m-5 scale-[5] self-end"/>
             </div>
           </BentoTilt>

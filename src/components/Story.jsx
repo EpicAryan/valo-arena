@@ -43,7 +43,7 @@ const Story = () => {
   return (
     <section id="story" className="min-h-dvh w-screen bg-black text-blue-50">
         <div className="flex flex-col size-full items-center py-10 pb-24">
-            <p className="font-general text-sm uppercase font-medium">
+            <p className="font-general text-sm md:text-base uppercase font-semibold">
                 Way to Valorant Arena
             </p>
             <div className="relative size-full">
@@ -74,7 +74,7 @@ const Story = () => {
             <div className = '-mt-96 flex w-full justify-center md:-mt-64 md:me-96 md:justify-end'>
                 <div className="flex h-full w-fit flex-col items-center md:items-start">
                     <p className="mt-3 max-w-sm text-center font-circular-web text-blue-75 md:text-start text-lg ">
-                        Join over 10 million players worldwide, challenge your friends, and face off in the most challenging battles in Valorant.
+                        Valorant maps offer dynamic battlegrounds, each with unique layouts and strategic challenges to master
                     </p>
                     <Button
                         id="realm-button" title="discover Maps" containerClass='mt-5 shadow-xl shadow-gray-400/40 hover:bg-red-primary hover:shadow-red-primary/40' titleClass='text-sm font-medium'

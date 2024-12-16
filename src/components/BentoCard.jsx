@@ -65,7 +65,7 @@ const BentoCard = ({src, title, description,containerClass, hoverPlay = false, a
                     {title}
                 </h1>
                 {description && (
-                    <p className="mt-3 max-w-64 text-sm md:text-base">
+                    <p className="mt-3 max-w-64 text-sm md:text-base font-medium">
                         {description}
                     </p>
                 )}

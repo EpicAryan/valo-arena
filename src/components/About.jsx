@@ -28,10 +28,10 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen overflow-x-hidden">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-          <h2 className="font-general text-sm uppercase md:text-sm text-red-secondary font-medium">
+          <h2 className="font-general text-sm uppercase md:text-base text-red-secondary font-semibold">
             Welcome To The Valorant World
           </h2>
-          <AnimatedTitle title="Explore thrilling battles and <br/> unleash your ultimate potential" containerClass="mt-5 !text-black text-center !text-3xl md:!text-[5rem] "/>
+          <AnimatedTitle title="Explore thrilling battles and <br/> unleash your ultimate potential" containerClass="mt-5 !text-black text-center !text-3xl md:!text-[4.5rem] !leading-[.6]"/>
           <div className="about-subtext">
             <p>
               Valorant begins—your tactics, your triumphs, your legend

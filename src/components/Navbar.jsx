@@ -60,7 +60,7 @@ const Navbar = () => {
             <nav className="flex size-full items-center justify-between p-4">
                 <div className="flex items-center gap-7">
                     <img src="/img/logo.png" alt="logo" className="w-20" />
-                    <Button id="product-button" title="Products" rightIcon={<TiLocationArrow/>} containerClass="bg-yellow-tertiary border border-white md:flex hidden items-center justify-center gap-1 hover:bg-white hover:border-yellow-400 hover:font-semibold" titleClass="hover:font-semibold"/>
+                    <Button id="product-button" title="Riot Games" rightIcon={<TiLocationArrow/>} containerClass="bg-yellow-secondary border md:flex hidden items-center justify-center gap-1 hover:bg-yellow-tertiary shadow-md shadow-yellow-secondary/40" titleClass="hover:font-semibold"/>
                 </div>
                 <div className="flex h-full items-center">
                     <div className="hidden md:block">
