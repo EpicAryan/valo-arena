@@ -34,7 +34,7 @@ const Contact = () => {
 
           <AnimatedTitle 
               title="Show your skills in <br /> Valo Arena—where <br />champions are made!"
-              containerClass=" !text-3xl md:!text-[5rem] w-full !leading-[.8] md:!leading-none"
+              containerClass=" !text-4xl md:!text-[5rem] w-full !leading-[.8] md:!leading-none"
           />
           <Button title="contact us" containerClass="mt-16 cursor-pointer shadow-xl shadow-gray-400/40 hover:bg-red-primary hover:shadow-red-primary/40" titleClass="text-sm font-medium"/>
         </div>

@@ -48,9 +48,9 @@ const Story = () => {
             </p>
             <div className="relative size-full">
                 <AnimatedTitle
-                    title="The Way to <br /> Valorant Arena"
+                    title="Unveil Secrets of <br /> Valorant Sites"
                     sectionId = "#story"
-                    containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
+                    containerClass="!text-4xl md:!text-[5rem] !leading-[.8] mt-5 pointer-events-none mix-blend-difference relative z-10"
                 />
 
                 <div className="story-img-container">
@@ -62,7 +62,7 @@ const Story = () => {
                                 onMouseUp={handleMouseLeave}
                                 onMouseEnter={handleMouseLeave}
                                 onMouseMove={handleMouseMove}
-                                src="/img/entrance.webp" 
+                                src="/img/story.webp" 
                                 alt="entrance" 
                                 className="object-contain" 
                             />
@@ -71,13 +71,14 @@ const Story = () => {
                     <RoundedCorners />
                 </div>
             </div>
-            <div className = '-mt-80 flex w-full justify-center md:-mt-64 md:me-96 md:justify-end'>
+            <div className = '-mt-96 flex w-full justify-center md:-mt-64 md:me-96 md:justify-end'>
                 <div className="flex h-full w-fit flex-col items-center md:items-start">
                     <p className="mt-3 max-w-sm text-center font-circular-web text-blue-75 md:text-start text-lg ">
                         Join over 10 million players worldwide, challenge your friends, and face off in the most challenging battles in Valorant.
                     </p>
                     <Button
-                        id="realm-button" title="discover prologue" containerClass='mt-5' titleClass='text-sm font-medium'
+                        id="realm-button" title="discover Maps" containerClass='mt-5 shadow-xl shadow-gray-400/40 hover:bg-red-primary hover:shadow-red-primary/40' titleClass='text-sm font-medium'
+
                     />
                 </div>
             </div>
