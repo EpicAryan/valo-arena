@@ -27,7 +27,7 @@ const Hero = () => {
 
        setCurrentIndex(upcomingVideoIndex);
     };
-    const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
+    const getVideoSrc = (index) => `videos/hero-${index}.webm`;
 
     useEffect(() => {
         if(loadedVideos === totalVideos-1) {
@@ -100,7 +100,7 @@ const Hero = () => {
                             <video
                                 ref={nextVideoRef}
                                 src={getVideoSrc(upcomingVideoIndex)}
-                                autoPlay
+                                // autoPlay
                                 loop
                                 muted
                                 id="current-video"

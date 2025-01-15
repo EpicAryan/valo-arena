@@ -15,7 +15,7 @@ const Features = () => {
         </div>
         <BentoTilt className="w-full h-[65vh] md:h-[70vh] border-hsla rounded-xl relative mb-10 overflow-hidden">
           <BentoCard 
-            src="videos/feature-1.mp4"
+            src="videos/feature-1.webm"
             title = {<>radiant</>}
             description = "Face off in the most challenging battles in Valorant. See how radiant players defeat their enemies and gain the ultimate reward"
             hoverPlay={true}
@@ -24,7 +24,7 @@ const Features = () => {
         <div className="grid h-[140vh] grid-cols-2 grid-rows-3 gap-10">
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 ">
             <BentoCard 
-              src="videos/feature-2.mp4"
+              src="videos/feature-2.webm"
               title = {<>Agents</>}
               description = "Unleash the power of unique Valorant agents, each armed with game-changing abilities and personalities that redefine every battle!"
               autoPlay={true}
@@ -33,7 +33,7 @@ const Features = () => {
 
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 ms-32 md:ms-0">
             <BentoCard
-              src="videos/feature-3.mp4"
+              src="videos/feature-3.webm"
               title = {<>community</>}
               description = "Connect with fellow Valorant players, share your experiences, and learn from each other. Join the Valorant community today!"
               autoPlay={true}
@@ -42,7 +42,7 @@ const Features = () => {
 
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 me-24 md:me-0">
             <BentoCard
-              src="videos/feature-4.mp4"
+              src="videos/feature-4.webm"
               title = {<>Arsenal</>}
               description = "Master Valorant’s lethal weapons and game-changing ultimates to dominate every battle!"
               autoPlay={true}
@@ -56,7 +56,7 @@ const Features = () => {
           </BentoTilt>
           <BentoTilt className="bento-tilt_2">
             <video
-              src="videos/feature-5.mp4"
+              src="videos/feature-5.webm"
               loop
               muted
               autoPlay
