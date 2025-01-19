@@ -10,12 +10,14 @@ const Story = () => {
     const handleMouseLeave = () => {
         const element = frameRef.current;
 
-        gsap.to(element, {
-            duration: 0.3,
-            rotateX: 0,
-            rotateY: 0,
-            ease: "power1.inOut"
-        })
+        if (element) {
+            gsap.to(element, {
+              duration: 0.3,
+              rotateX: 0,
+              rotateY: 0,
+              ease: "power1.inOut",
+            });
+          }
     };
 
     const handleMouseMove = (e) => {
@@ -29,8 +31,8 @@ const Story = () => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = ((y - centerY) / centerY) * -3;
-        const rotateY = ((x - centerX) / centerX) * 3;
+        const rotateX = ((y - centerY) / centerY) * -10;
+        const rotateY = ((x - centerX) / centerX) * 10;
 
         gsap.to(element, {
             duration: 0.3,
@@ -48,9 +50,9 @@ const Story = () => {
             </p>
             <div className="relative size-full">
                 <AnimatedTitle
-                    title="Unveil Secrets of <br /> Valorant Sites"
+                    title="U<b>n</b>v<b>e</b>il Se<b>c</b>r<b>e</b>ts of <br /> V<b>a</b>l<b>o</b>r<b>a</b>nt Sit<b>e</b>s"
                     sectionId = "#story"
-                    containerClass="!text-4xl md:!text-[5rem] !leading-[.8] mt-5 pointer-events-none mix-blend-difference relative z-10"
+                    containerClass=" mt-5 pointer-events-none mix-blend-difference relative z-10"
                 />
 
                 <div className="story-img-container">

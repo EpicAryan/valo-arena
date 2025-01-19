@@ -1,5 +1,6 @@
 import AnimatedTitle from './AnimatedTitle'
 import Button from './Button'
+import PropTypes from "prop-types";
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass}>
     <img src={src} />
@@ -33,7 +34,7 @@ const Contact = () => {
           </p>
 
           <AnimatedTitle 
-              title="Show your skills in <br /> Valo Arena—where <br />champions are made!"
+              title="S<b>h</b>ow y<b>o</b>ur s<b>k</b>ills in <br /> V<b>a</b>lo Are<b>n</b>a—wh<b>e</b>re <br />cha<b>m</b>pio<b>n</b>s are ma<b>d</b>e!"
               containerClass=" !text-4xl md:!text-[5rem] w-full !leading-[.8] md:!leading-none"
           />
           <Button title="contact us" containerClass="mt-16 cursor-pointer shadow-xl shadow-gray-400/40 hover:bg-red-primary hover:shadow-red-primary/40" titleClass="text-sm font-medium"/>
@@ -44,4 +45,9 @@ const Contact = () => {
 
 }
 
+
+ImageClipBox.propTypes = {
+  src: PropTypes.string.isRequired,
+  clipClass: PropTypes.string,
+};
 export default Contact

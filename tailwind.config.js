@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        zentry: ['zentry-regular', 'sans-serif'],
-        general: ['general', 'sans-serif'],
-        'circular-web': ['circular-web', 'sans-serif'],
-        'robert-medium': ['robert-medium'],
-        'robert-regular': ['robert-regular'],
+        zentry: ['Zentry', 'sans-serif'],
+        general: ["General", "sans-serif"],
+        "robert-medium": ["Robert-Medium", "sans-serif"],
+        "robert-regular": ["Robert-Regular", "sans-serif"],
+        "circular-web": ["Circular-Web", "sans-serif"],
         'valorant': ['valorant', 'sans-serif'],
         'chicle': ['chicle', 'sans-serif'],
       },

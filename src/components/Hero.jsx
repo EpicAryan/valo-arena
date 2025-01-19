@@ -90,7 +90,7 @@ const Hero = () => {
                     </div>
                 </div>
             )}
-            <div id="video-frame" className="relative z-10 h-dvh overflow-hidden  bg-blue-75">
+            <div id="video-frame" className="relative z-10 h-dvh overflow-hidden w-screen  bg-blue-75">
                 <div>
                     <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
                         <div 
@@ -127,27 +127,27 @@ const Hero = () => {
                         onLoadedData = {handleVideoLoad}
                     />
                 </div>
-                <h1 className=" hero-heading absolute bottom-5 right-5 z-40 text-blue-100 tracking-wide">
-                    GAMING
+                <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-100 tracking-wide">
+                    G<b>A</b>MI<b>N</b>G
                 </h1>
 
                 <div className="absolute left-0 top-0 z-40 size-full">
                     <div className="mt-24 px-5 sm:px-10">
-                        <h1 className="hero-heading text-blue-100 drop-shadow-2xl tracking-wide">
-                            VALORA<b className="">N</b>T
+                        <h1 className="special-font hero-heading text-blue-100 drop-shadow-2xl ">
+                            V<b>A</b>L<b>O</b>R<b>A</b>NT
                         </h1>
                         <div className="md:ml-3">
                             <p className="max-w-68 font-robert-regular text-blue-100 font-medium text-sm lg:text-base mb-2">
                                 A 5v5 character-based tactical shooter <br /> with ultimate gaming experience
                             </p>
-                            <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="!bg-red-secondary flex-center gap-1 shadow-md shadow-red-primary/40 hover:!bg-red-tertiary hover:shadow-red-primary/40"  />
+                            <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="!bg-red-secondary/90 text-white flex-center gap-1 shadow-md shadow-red-primary/40 hover:!bg-red-tertiary/90 hover:shadow-red-primary/50"  />
                         </div>
                         
                     </div>
                 </div>
             </div>
-            <h1 className=" hero-heading absolute bottom-5 right-5 text-black tracking-wide">
-                GAMING
+            <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black tracking-wide">
+                G<b>A</b>MI<b>N</b>G
             </h1>
         </div>
     );

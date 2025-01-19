@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { useRef, useState } from 'react';
-
+import PropTypes from "prop-types";
 const BentoTilt = ({ children, className = ''}) => {
     const [transformStyle, setTransformStyle] = useState('');
     const  itemRef = useRef(null);
@@ -74,5 +74,19 @@ const BentoCard = ({src, title, description,containerClass, hoverPlay = false, a
     </div>
   )
 }
+
+BentoTilt.propTypes = {
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+  };
+  
+  BentoCard.propTypes = {
+    src: PropTypes.string.isRequired,
+    title: PropTypes.node.isRequired,
+    description: PropTypes.string,
+    containerClass: PropTypes.string,
+    hoverPlay: PropTypes.bool,
+    autoPlay: PropTypes.bool,
+  };
 
 export {BentoCard, BentoTilt}

@@ -31,13 +31,15 @@ const About = () => {
           <h2 className="font-general text-sm uppercase md:text-base text-red-secondary font-semibold">
             Welcome To The Valorant World
           </h2>
-          <AnimatedTitle title="Explore thrilling battles and <br/> unleash your ultimate potential" containerClass="mt-5 !text-black text-center !text-3xl md:!text-[4.5rem] !leading-[.6]"/>
+          <AnimatedTitle title="Unleash your <br /> V<b>A</b>LOR<b>A</b>NT potential" containerClass="mt-5 !text-black text-center "/>
           <div className="about-subtext">
             <p>
               Valorant begins—your tactics, your triumphs, your legend
             </p>
-            <p>
-              With its immersive world, epic battles, and a vibrant community, Valorant offers a unique and exciting gaming experience.
+            <p className="text-gray-500">
+              Blend your style and experience on a global, competitive stage. You
+              have 13 rounds to attack and defend your side using sharp gunplay
+              and tactical abilities.
             </p>
           </div>
       </div>
