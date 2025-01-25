@@ -140,7 +140,9 @@ const Hero = () => {
                             <p className="max-w-68 font-robert-regular text-blue-100 font-medium text-sm lg:text-base mb-2">
                                 A 5v5 character-based tactical shooter <br /> with ultimate gaming experience
                             </p>
-                            <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="!bg-red-secondary/90 text-white flex-center gap-1 shadow-md shadow-red-primary/40 hover:!bg-red-tertiary/90 hover:shadow-red-primary/50"  />
+                            <a href="https://playvalorant.com/en-us/" target="_blank" rel="noopener noreferrer">
+                                <Button id="play-now" title="Play Now" leftIcon={<TiLocationArrow/>} containerClass="!bg-red-secondary/90 text-white flex-center gap-1 shadow-md shadow-red-primary/40 hover:!bg-red-tertiary/90 hover:shadow-red-primary/50"  />
+                            </a>
                         </div>
                         
                     </div>

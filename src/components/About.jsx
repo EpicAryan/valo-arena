@@ -32,7 +32,7 @@ const About = () => {
             Welcome To The Valorant World
           </h2>
           <AnimatedTitle title="Unleash your <br /> V<b>A</b>LOR<b>A</b>NT potential" containerClass="mt-5 !text-black text-center "/>
-          <div className="about-subtext">
+          <div className="about-subtext ">
             <p>
               Valorant begins—your tactics, your triumphs, your legend
             </p>

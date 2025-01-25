@@ -78,10 +78,11 @@ const Story = () => {
                     <p className="mt-3 max-w-sm text-center font-circular-web text-blue-75 md:text-start text-lg ">
                         Valorant maps offer dynamic battlegrounds, each with unique layouts and strategic challenges to master
                     </p>
-                    <Button
+                    <a href="https://playvalorant.com/en-us/maps/" target="_blank" rel="noopener noreferrer">
+                        <Button
                         id="realm-button" title="discover Maps" containerClass='mt-5 shadow-xl shadow-gray-400/40 hover:bg-red-primary hover:shadow-red-primary/40' titleClass='text-sm font-medium'
-
-                    />
+                        />
+                    </a>
                 </div>
             </div>
         </div>
