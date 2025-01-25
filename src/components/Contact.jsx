@@ -23,7 +23,7 @@ const Contact = () => {
            clipClass="contact-clip-path-2 lg:translate-y-52 translate-y-60"
           />
         </div>
-        <div className="absolute -top-40 left-40 w-60 md:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
+        <div className="absolute -top-40 left-20 w-60 md:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80">
           <ImageClipBox
             src="/img/sova.webp"
             clipClass="sword-man-clip-path md:scale-125"
@@ -43,7 +43,7 @@ const Contact = () => {
           </a>
         </div>
       </div>
-      <div className="absolute right-[30%] md:right-[40%] w-60 py-2 bg-gradient-to-r from-blue-300 to-violet-300 mt-12 rounded-md justify-center items-center flex shadow-lg shadow-gray-400">
+      <div className="absolute right-[20%] md:right-[40%] w-60 py-2 bg-gradient-to-r from-blue-300 to-violet-300 mt-6 md:mt-12 rounded-md justify-center items-center flex shadow-lg shadow-gray-400">
         <p className='flex gap-2 font-robert-medium text-gray-800'>Made with <span className='text-red-700'><HeartPulse/></span> by Aryan</p>
       </div>
     </div>
