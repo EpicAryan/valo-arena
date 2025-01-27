@@ -50,7 +50,7 @@ const Hero = () => {
         if(hasClicked){
             gsap.set("#next-video",{ visibility: "visible" });
             gsap.to('#next-video', {
-                transformation: 'center center',
+                transformOrigin: "center center",
                 scale: 1,
                 width: '100%',
                 height: '100%',
@@ -60,7 +60,7 @@ const Hero = () => {
             })
 
             gsap.from('#current-video', {
-                transformation: 'center center',
+                transformOrigin: "center center",
                 scale: 0,
                 duration: 1.5,
                 ease: 'power1.inOut',
