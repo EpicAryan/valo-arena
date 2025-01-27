@@ -181,12 +181,11 @@ const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(1);
     const [hasClicked, setHasClicked] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
+    const nextVideoRef = useRef(null);
+    const preloadedUrls = useRef(new Map());
+    
     const totalVideos = 4;
     
-    const nextVideoRef = useRef(null);
-    const loadedVideoTracker = useRef(new Set());
-
-    // Memoize video sources
     const videoSources = useMemo(() => 
         Array.from({ length: totalVideos }, (_, i) => `/videos/hero-${i + 1}.webm`),
         []
@@ -194,37 +193,55 @@ const Hero = () => {
 
     const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
-    // Preload videos
     useEffect(() => {
-        const preloadVideos = async () => {
-            const loadPromises = videoSources.map((src) => {
-                return new Promise((resolve) => {
-                    const video = document.createElement('video');
-                    video.preload = 'auto';
-                    video.muted = true;
-                    
-                    video.onloadeddata = () => {
-                        loadedVideoTracker.current.add(src);
+        let mounted = true;
+
+        const preloadVideo = (src) => {
+            return new Promise((resolve, reject) => {
+                if (preloadedUrls.current.has(src)) {
+                    resolve();
+                    return;
+                }
+
+                const video = document.createElement('video');
+                
+                video.onloadeddata = () => {
+                    if (mounted) {
+                        preloadedUrls.current.set(src, true);
                         resolve();
-                    };
+                    }
+                };
 
-                    video.onerror = () => {
-                        console.error(`Error loading video: ${src}`);
-                        resolve(); // Resolve anyway to prevent hanging
-                    };
+                video.onerror = () => {
+                    console.error(`Failed to load video: ${src}`);
+                    reject();
+                };
 
-                    video.src = src;
-                });
+                video.preload = 'auto';
+                video.muted = true;
+                video.src = src;
             });
+        };
 
+        const loadSequentially = async () => {
             try {
-                await Promise.all(loadPromises);
+                for (let i = 0; i < videoSources.length && mounted; i++) {
+                    await preloadVideo(videoSources[i]);
+                }
+            } catch (error) {
+                console.error('Error during video preloading:', error);
             } finally {
-                setIsLoading(false);
+                if (mounted) {
+                    setIsLoading(false);
+                }
             }
         };
 
-        preloadVideos();
+        loadSequentially();
+
+        return () => {
+            mounted = false;
+        };
     }, [videoSources]);
 
     const handleMiniVdClick = () => {
