@@ -1,5 +1,5 @@
 
-import { useState,useRef, useEffect } from "react";
+import { useState,useRef, useEffect, useMemo } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
@@ -16,9 +16,18 @@ const Hero = () => {
     const totalVideos = 4;
     const nextVideoRef = useRef(null);
    
-    const handleVideoLoad = () => {
-        setLoadedVideos((prev) => prev + 1);
+    // const handleVideoLoad = () => {
+    //     setLoadedVideos((prev) => prev + 1);
+    // };
+    const handleVideoLoad = useRef(new Set());
+
+    const onVideoLoad = (index) => {
+        if (!handleVideoLoad.current.has(index)) {
+            handleVideoLoad.current.add(index);
+            setLoadedVideos((prev) => prev + 1);
+        }
     };
+
 
     const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
@@ -27,7 +36,9 @@ const Hero = () => {
 
        setCurrentIndex(upcomingVideoIndex);
     };
-    const getVideoSrc = (index) => `videos/hero-${index}.webm`;
+    // const getVideoSrc = (index) => `videos/hero-${index}.webm`;
+    const getVideoSrc = useMemo(() => (index) => `videos/hero-${index}.webm`, []);
+
 
     useEffect(() => {
         if(loadedVideos === totalVideos-1) {
@@ -45,7 +56,7 @@ const Hero = () => {
                 height: '100%',
                 duration: 1,
                 ease: 'power1.inOut',
-                onStart: () => nextVideoRef.current.play(),
+                onStart: () => nextVideoRef.current?.play(),
             })
 
             gsap.from('#current-video', {
@@ -105,7 +116,7 @@ const Hero = () => {
                                 muted
                                 id="current-video"
                                 className="size-64 origin-center scale-150 object-cover object-center"
-                                onLoadedData = {handleVideoLoad}
+                                onLoadedData = {onVideoLoad}
                             />
                         </div>
                     </div>
@@ -116,7 +127,7 @@ const Hero = () => {
                         muted
                         id="next-video"
                         className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
-                        onLoadedData = {handleVideoLoad}
+                        onLoadedData = {onVideoLoad}
                     />
                     <video
                         src={getVideoSrc( currentIndex === totalVideos -1? 1 : currentIndex )}
@@ -124,7 +135,7 @@ const Hero = () => {
                         loop
                         muted
                         className="absolute left-0 top-0 size-full object-cover object-center"
-                        onLoadedData = {handleVideoLoad}
+                        onLoadedData = {onVideoLoad}
                     />
                 </div>
                 <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-100 tracking-wide">
