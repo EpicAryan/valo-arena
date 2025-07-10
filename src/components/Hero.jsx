@@ -20,7 +20,12 @@ const Hero = () => {
         setLoadedVideos((prev) => prev + 1);
     };
 
-
+    const VIDEO_SOURCES = [
+    "https://videos.ctfassets.net/m3x6aw9x53qp/2iFQaDmAZzGe7mq4Tbwz3r/86cc9ba9453a86535aa65bd9a6972508/hero-1.webm",
+    "https://videos.ctfassets.net/m3x6aw9x53qp/5t9LVpI6ZtqmpA0PIdOwEJ/739a20b9ab47f6fb7f5a4957623c5b11/hero-2.webm",
+    "https://videos.ctfassets.net/m3x6aw9x53qp/cnz8YAH44nvPzgAOOtE9G/2764f48c8431b8beb92111c5f4b1308f/hero-3.webm",
+    "https://videos.ctfassets.net/m3x6aw9x53qp/3LDL82MfxWXSBydT0kMDfB/46951e3f1e30b03183f6bda959a7c36b/hero-4.webm",
+    ];
 
     const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
@@ -29,8 +34,9 @@ const Hero = () => {
 
        setCurrentIndex(upcomingVideoIndex);
     };
-    const getVideoSrc = (index) => `videos/hero-${index}.webm`;
- 
+    // const getVideoSrc = (index) => `videos/hero-${index}.webm`;
+    const getVideoSrc = (index) => VIDEO_SOURCES[index - 1] ?? VIDEO_SOURCES[0];
+
 
 
     useEffect(() => {
