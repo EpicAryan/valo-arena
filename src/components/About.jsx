@@ -45,7 +45,7 @@ const About = () => {
       </div>
       <div className="h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image border-2 border-gray-500 ">
-          <img src="img/about.jpeg" alt="background" className="absolute left-0 top-0 size-full object-cover"/>
+          <img src="https://images.ctfassets.net/m3x6aw9x53qp/67Hdm2R2ZWbCGICW4lC8Qu/f312dd15237dcd80b34d8fa558948f5f/about.jpeg" alt="background" className="absolute left-0 top-0 size-full object-cover"/>
         </div>
       </div>
     </div>
